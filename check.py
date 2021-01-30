@@ -9,8 +9,8 @@ num_thread = int(sys.argv[2])
 len_thread = int(sys.argv[3])
 
 disk_queue = []
-thread = np.zeros(num_thread) ## 0 idle, 1 busy, -1 inactive
-thread_wl = np.zeros(num_thread)+len_thread  ## decrement to 0
+thread = np.zeros(num_thread)
+thread_wl = np.zeros(num_thread)+len_thread
 
 last_track = 0
 
@@ -34,11 +34,12 @@ for line in f:
         thread_wl[result[1]] -= 1
         if thread_wl[result[1]] == 0:
             thread[result[1]] = -1
+            num_thread -= 1
 
     elif result[0] == 'service':
         result[2] = int(result[2])
         result[4] = int(result[4])
-        if len(disk_queue) < max_disk_queue:
+        if len(disk_queue) < min(max_disk_queue, num_thread):
             print("line %d, disk not full"%l)
             break
         if abs(result[4]-last_track) != abs(np.asarray(disk_queue)-last_track).min():
@@ -54,4 +55,4 @@ for line in f:
 
 f.close()
 
-print("Good Job")
+print("Good Job!")

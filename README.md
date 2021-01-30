@@ -15,12 +15,10 @@ python Gen.py [testcase数目] [每个文件长度]
 >>> testdisk.in0 testdisk.in1 .....
 ```
 
-将输出的文件复制
-
 运行程序
 
 ```shell
-[可执行文件名] max_disk_queue [Ctrl+c]
+[可执行文件名] max_disk_queue testdisk*
 ```
 
 自动生成一个ans文件
