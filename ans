@@ -1,0 +1,44 @@
+requester 0 track 0
+service requester 0 track 0
+requester 0 track 200
+service requester 0 track 200
+requester 0 track 483
+service requester 0 track 483
+requester 1 track 692
+service requester 1 track 692
+requester 1 track 697
+service requester 1 track 697
+requester 1 track 517
+service requester 1 track 517
+requester 1 track 613
+service requester 1 track 613
+requester 1 track 593
+service requester 1 track 593
+requester 0 track 347
+service requester 0 track 347
+requester 1 track 558
+service requester 1 track 558
+requester 1 track 829
+service requester 1 track 829
+requester 1 track 783
+service requester 1 track 783
+requester 1 track 22
+service requester 1 track 22
+requester 0 track 496
+service requester 0 track 496
+requester 0 track 364
+service requester 0 track 364
+requester 1 track 623
+service requester 1 track 623
+--request thread #1 -> inactive 
+requester 0 track 300
+service requester 0 track 300
+requester 0 track 286
+service requester 0 track 286
+requester 0 track 967
+service requester 0 track 967
+requester 0 track 556
+service requester 0 track 556
+--request thread #0 -> inactive 
+--service all finished
+No runnable threads.  Exiting.
